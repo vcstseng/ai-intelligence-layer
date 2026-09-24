@@ -1,0 +1,42 @@
+{
+  "case_id": "growth-without-profit",
+  "purpose": "Static technical-proof fixture for the browser prototype. It does not represent live production data.",
+  "business_context": {
+    "company": "ACME COMMERCE",
+    "campaign": "Campaign A",
+    "current_free_shipping_threshold_usd": 50,
+    "available_levers": ["reduce_discount", "raise_free_shipping_threshold", "reallocate_campaign_spend"]
+  },
+  "deterministic_metrics": {
+    "revenue": {"baseline_usd": 84000, "current_usd": 119000},
+    "orders": {"baseline": 912, "current": 1406},
+    "discount_rate": {"baseline": 0.10, "current": 0.20},
+    "cac_usd": {"baseline": 11.20, "current": 14.30},
+    "contribution_margin": {"baseline": 0.182, "current": 0.031},
+    "ninety_day_repeat_rate": {"campaign": 0.384, "portfolio_average": 0.241},
+    "ninety_day_contribution_usd": {"campaign": 31.80, "portfolio_average": 18.10}
+  },
+  "evidence": [
+    {
+      "id": "E1",
+      "role": "supports",
+      "title": "Campaign A unit economics",
+      "claim_support": "Near-term contribution economics weakened while revenue and order volume grew."
+    },
+    {
+      "id": "E2",
+      "role": "qualifies",
+      "title": "90-day customer value",
+      "claim_support": "Higher downstream value means the campaign should not be treated as simply ineffective."
+    }
+  ],
+  "human_decision": {
+    "recommended_intervention": "raise_free_shipping_threshold",
+    "human_selected_threshold_usd": 65,
+    "guardrails": {
+      "contribution_profit": "> +5%",
+      "revenue_impact": "> -3%",
+      "conversion_impact": "> -5%"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "contract": "growth-interpret-v1",
+  "input": {
+    "required_evidence_ids": ["E1"],
+    "qualifying_evidence_ids": ["E2"],
+    "context_required": ["unit_economics_definition", "available_levers", "decision_memory"]
+  },
+  "output": {
+    "claim": "string",
+    "evidence_refs": ["E1", "E2"],
+    "uncertainties": ["string"],
+    "options": [
+      {"intervention": "string", "trade_off": "string"}
+    ],
+    "human_decision_required": true
+  },
+  "demo_output": {
+    "claim": "Campaign A growth is creating weaker near-term contribution economics.",
+    "evidence_refs": ["E1", "E2"],
+    "uncertainties": ["Higher 90-day value qualifies a purely short-term response."],
+    "options": [
+      {"intervention": "reduce_discount", "trade_off": "Improves contribution per order but may reduce demand."},
+      {"intervention": "raise_free_shipping_threshold", "trade_off": "Reduces shipping subsidy while preserving campaign structure."},
+      {"intervention": "reallocate_campaign_spend", "trade_off": "Reduces exposure but may sacrifice high-value acquisition."}
+    ],
+    "human_decision_required": true
+  },
+  "execution_status": "Simulated structured output in the static prototype. No model call is implemented."
+}
