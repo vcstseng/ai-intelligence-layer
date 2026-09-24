@@ -60,3 +60,81 @@ Start small:
 `example data → deterministic analytics → structured evidence → interpret() → structured business insight`
 
 The first implementation target is `core/interpret/`.
+
+
+## Repository structure
+
+```text
+ai-intelligence-layer/
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+├── docs/
+│   ├── architecture.md
+│   ├── product-principles.md
+│   └── repository-map.md
+│
+├── core/
+│   ├── interpret/
+│   │   └── README.md
+│   ├── ground/
+│   │   └── README.md
+│   └── generate/
+│       └── README.md
+│
+├── analytics/
+│   ├── metrics/
+│   ├── comparisons/
+│   ├── segmentation/
+│   └── rules/
+│
+├── context/
+│   ├── business-context/
+│   ├── decision-memory/
+│   ├── methodologies/
+│   └── industry-knowledge/
+│
+├── examples/
+│   ├── ecommerce/
+│   │   ├── growth-without-profit/
+│   │   ├── inventory-risk/
+│   │   ├── retention-shift/
+│   │   └── organic-opportunity/
+│   │
+│   ├── restaurant/
+│   │   ├── food-cost-pressure/
+│   │   ├── promotion-efficiency/
+│   │   ├── repeat-customer-decline/
+│   │   └── premium-menu-opportunity/
+│   │
+│   └── project-management/
+│       ├── critical-path-risk/
+│       ├── scope-pressure/
+│       ├── vendor-dependency/
+│       └── resource-capacity/
+│
+├── evals/
+├── tests/
+│
+└── prototype/
+    ├── index.html
+    ├── styles.css
+    ├── app.js
+    ├── i18n.js
+    ├── README.md
+    ├── assets/
+    └── data/
+```
+
+The repository separates reusable intelligence capabilities from business-specific reference cases and the browser-based product prototype.
+
+- **`core/`** contains reusable AI reasoning operations.
+- **`analytics/`** contains deterministic calculations and analytical rules.
+- **`context/`** provides business meaning, decision memory, methodologies, and industry knowledge.
+- **`examples/`** contains reference scenarios used to test generalization across business contexts.
+- **`evals/`** evaluates the quality and grounding of AI outputs.
+- **`tests/`** verifies deterministic behavior and contracts.
+- **`prototype/`** contains the unified bilingual browser demo.
+
+The directory structure is an architectural scaffold. Most intelligence components are not implemented yet; the current working deliverable is the interactive prototype.
