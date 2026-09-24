@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Intelligence Layer</title><link rel="stylesheet" href="styles.css">
+  <style>
+    .path-cta{margin-top:22px;padding:16px 18px;border:1px solid #b7cdd8;background:#eef5f7;border-radius:7px;display:flex;justify-content:space-between;align-items:center;gap:18px}.path-cta p{margin:3px 0 0;color:#53646d}.path-cta button{border:0;border-radius:5px;background:#2e617c;color:white;padding:10px 13px;font-weight:750;white-space:nowrap}.path-cta button:hover{background:#234f67}.path-cta button:disabled{background:#91a4ad;color:#edf2f3;cursor:not-allowed}.path-step{font-size:10px;letter-spacing:1px;font-weight:850;color:#396b8a}@media(max-width:700px){.path-cta{display:block}.path-cta button{margin-top:12px;width:100%}}
+    .case-progress{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin:-8px 0 22px;padding:10px 12px;background:#fff;border:1px solid #dce1de;border-radius:6px}.case-progress span{font-size:10px;letter-spacing:.45px;color:#718087;font-weight:800;padding:3px 5px;border-radius:3px}.case-progress .done{color:#2f6a59;background:#edf7f2}.case-progress .now{color:#fff;background:#396b8a}.case-progress .sep{color:#b1b9bd;padding:0}.case-progress .case-kind{margin-left:auto;color:#38657c;background:#e8f0f4}.case-progress .pending{color:#81612e;background:#faf3e6}.why-now{margin-top:15px;padding-top:12px;border-top:1px solid #e6eae8;color:#52636b;font-size:12px}.why-now b{color:#36576a}
+    .decision-record input{width:78px;margin:0 3px;padding:6px 7px;border:1px solid #aebdc3;border-radius:4px;background:#fff;color:#15212b;font:inherit;font-weight:750}.decision-record input:focus{outline:2px solid #8db0c1;outline-offset:1px}
+    .context-strip{margin:16px 0;padding:12px 14px;border:1px solid #d8e3e7;border-radius:6px;background:#f7fafb}.context-strip b{display:block;font-size:10px;letter-spacing:1px;color:#396b8a;margin-bottom:7px}.context-sources{display:flex;gap:6px;flex-wrap:wrap}.context-sources span{font-size:11px;padding:4px 7px;border-radius:12px;background:#e5eff3;color:#385d70;font-weight:700}.context-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}.context-card{border:1px solid #dce1de;background:#fff;border-radius:6px;padding:13px}.context-card h4{font-size:12px;margin:0 0 5px}.context-card p{font-size:12px;margin:0;color:#596971}.synthesis{margin-top:12px;padding:14px 16px;background:#eef5f7;border-left:3px solid #396b8a}.synthesis b{font-size:10px;letter-spacing:1px;color:#396b8a}.synthesis p{margin:5px 0 0}.source-wrap{overflow-x:auto;max-width:100%}@media(max-width:700px){.context-grid{grid-template-columns:1fr}}
+  </style>
+  <style>
+    .language-toggle{display:flex;align-self:end;border:1px solid #dce1de;border-radius:5px;overflow:hidden}.language-toggle button{border:0;background:#fff;color:#53646d;font-size:11px;font-weight:750;padding:8px 10px}.language-toggle button.active{background:#396b8a;color:#fff}
+  </style>
+</head>
+<body>
+  <aside class="rail"><div class="brand"><span class="brand-mark">AI</span><span>INTELLIGENCE<br>LAYER</span></div>
+    <nav id="nav"><button data-page="overview" class="active">總覽</button><button data-page="insight">洞察</button><button data-page="evidence">證據</button><button data-page="decision">決策</button><button data-page="action">行動</button><button data-page="review">回顧</button></nav>
+    <button class="how" data-page="how">運作方式 <span>→</span></button>
+    <div class="rail-foot">AI 負責推理<br>資料提供佐證<br>人類做出決策</div>
+  </aside>
+  <main>
+    <header><div><div class="eyebrow">2026 年 9 月</div><h1 id="contextTitle">ACME COMMERCE</h1></div>
+      <div class="context-controls"><label id="domainLabel">領域<select id="domainSelect"></select></label><div class="language-toggle" role="group" aria-label="Language"><button type="button" data-lang="zh">中文</button><button type="button" data-lang="en">EN</button></div></div></header>
+    <section id="page"></section>
+  </main>
+  <div id="modal" class="modal hidden"><div class="modal-card"><button class="close">×</button><div id="modalContent"></div></div></div>
+  <script src="i18n.js"></script><script src="app.js"></script>
+</body></html>
